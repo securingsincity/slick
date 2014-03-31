@@ -528,10 +528,10 @@
         if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
 
             _.prevArrow = $(
-                '<a href="javascript:void(0)" tabIndex="-1">Previous</a>').appendTo(
+                '<a href="javascript:void(0)" tabIndex="-1"><</a>').appendTo(
                 _.slider).addClass('slick-prev');
             _.nextArrow = $(
-                '<a href="javascript:void(0)" tabIndex="-1">Next</a>').appendTo(
+                '<a href="javascript:void(0)" tabIndex="-1">></a>').appendTo(
                 _.slider).addClass('slick-next');
 
             if (_.options.infinite !== true) {
