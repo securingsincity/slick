@@ -1027,7 +1027,7 @@
         }
 
         if (_.options.onAfterChange !== null) {
-            _.options.onAfterChange.call(_.currentSlide,_);
+            _.options.onAfterChange.call(_.currentSlide);
         }
 
         _.setSlideClasses(_.currentSlide);
