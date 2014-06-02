@@ -931,7 +931,7 @@
         var animProps = {}, _ = this;
 
         if (_.options.onBeforeChange !== null) {
-            _.options.onBeforeChange.call();
+            _.options.onBeforeChange.call(_);
         }
 
         if (_.transformsEnabled === false) {
@@ -1027,7 +1027,7 @@
         }
 
         if (_.options.onAfterChange !== null) {
-            _.options.onAfterChange.call();
+            _.options.onAfterChange.call(_.currentSlide,_);
         }
 
         _.setSlideClasses(_.currentSlide);
