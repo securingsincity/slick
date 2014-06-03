@@ -518,7 +518,6 @@
         _.listHeight = _.list.height();
         _.slideWidth = Math.ceil(_.listWidth / _.options
             .slidesToShow);
-
     };
 
     Slick.prototype.buildArrows = function () {
@@ -674,7 +673,7 @@
         _.list.find('.slick-slide').width(_.slideWidth);
         if (_.options.vertical === false) {
             _.slideTrack.width(Math.ceil((_.slideWidth * _
-                .slider.find('.slick-slide').length)));
+                .slider.find('.slick-slide').length * 1.4)));
         } else {
             _.slideTrack.height(Math.ceil((_.listHeight * _
                 .slider.find('.slick-slide').length)));
@@ -1026,11 +1025,12 @@
             _.autoPlay();
         }
 
-        if (_.options.onAfterChange !== null) {
-            _.options.onAfterChange.call(_.currentSlide);
-        }
 
         _.setSlideClasses(_.currentSlide);
+
+        if (_.options.onAfterChange !== null) {
+            _.options.onAfterChange.call(_);
+        }
 
     };
 
